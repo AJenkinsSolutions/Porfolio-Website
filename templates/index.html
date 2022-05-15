@@ -4,7 +4,7 @@
 {%block content%}
 
 
-<section>
+<section class="container">
 
         <div class="container">
       <nav class="navbar navbar-expand-lg bg-light">
@@ -28,23 +28,36 @@
 </nav>
         </div>
     <div class="container">
-    <div class="row">
+
+        <div class="row">
+
         <div class="col-lg-6">
-            <h1>ALEX JENKINS <br>PORTFOLIO
-            </h1>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Nibh ipsum consequat nisl vel pretium lectus.
-            </p>
-            <button>
-                <p>HIRE ME</p>
-            </button>
+
+            <div class="container .mx-auto m-5">
+            <h1>ALEX JENKINS <br>PORTFOLIO</h1>
+                <p>
+                Lorem ipsum dolor sit amet, consectetur<br>
+                adipiscing elit,<br>
+                sed do eiusmod tempor incididunt ut labore <br>
+                et dolore magna aliqua.<br>
+                Nibh ipsum consequat nisl vel pretium lectus.<br>
+                </p>
+            <div class="d-grid col-6"><a class="btn btn-primary" href="#" role="button">Hire</a></div>
+            </div>
+
         </div>
         <div class="col-lg-6">
-            <h2>
-        <img src="static/img/coding-memoji.png">
-         </h2>
+
+        <div class="text-center">
+        <img src="static/img/coding-memoji.png" class="img-fluid">
+        </div>
+
+            <br>
+            <div class="d-grid col-6 mx-auto">
+         <a class="btn btn-primary" href="#" role="button">
+             Resume
+         </a>
+            </div>
         </div>
     </div>
     </div>
@@ -52,9 +65,50 @@
 
 
 </section>
-<section>
+<br>
+<br>
+<section class="container">
     <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="text-center">
+                    <h2> About Me </h2>
+                    <img src="static/img/verticle-profile-stage.JPG" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h3>Game Design</h3>
+                        <p>
+                Lorem ipsum dolor sit amet, consectetur<br>
+                adipiscing elit,<br>
+                Nibh ipsum consequat nisl vel pretium lectus.<br>
+                </p>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="static/img/controller.png" class="img-fluid">
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <img src="static/img/pyhton_icon.png" class="img-fluid">
+                    </div>
+                    <div class="col-lg-6">
+                        <h3>Pyhton Junior Developer</h3>
+                        <p>
+                Lorem ipsum dolor sit amet, consectetur<br>
+                adipiscing elit,<br>
+                Nibh ipsum consequat nisl vel pretium lectus.<br>
+                </p>
+                    </div>
+                    </div>
 
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 {% endblock %}
