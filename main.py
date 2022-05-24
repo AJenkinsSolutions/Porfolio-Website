@@ -15,11 +15,11 @@ email_password = os.getenv('EMAIL_PASSWORD')
 target_email = os.getenv('TARGET_EMAIL')
 
 #   Test Enviroment variables
-print('PATH', os.getenv('PATH'))
+# print('PATH', os.getenv('PATH'))
 
 
 class ContactForm(FlaskForm):
-    name = StringField(label='Name', validators=[DataRequired(), Length(min=2, max=12)])
+    name = StringField(label='Name', validators=[DataRequired(), Length(min=2, max=120)])
     email = StringField(label='Email', validators=[DataRequired(), Email()])
     phone = IntegerField(label='Phone', validators=[DataRequired()])
     message = TextAreaField(label='Message', validators=[DataRequired(), Length(max=120)])
@@ -52,8 +52,6 @@ def home():
         return render_template('index.html', form=contact_form, msg_sent=True )
     else:
         return render_template("index.html", form=contact_form, msg_sent=False)
-
-
 
 
 if __name__ == '__main__':

@@ -3,11 +3,7 @@
 
 {%block content%}
 
-
-<section class="container">
-
-<div class="container">
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #333;">
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color: #333;">
       <div class="container-fluid">
         <a class="navbar-brand" href="#" style="color: white;">Navbar</a>
         <button class="navbar-toggler"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
@@ -16,22 +12,25 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent" >
               <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#" style="color: white;">Home</a>
+                  <a class="nav-link active" aria-current="page" href="#home-section" style="color: white;">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#" style="color: white;">About</a>
+                  <a class="nav-link" href="#about_section" style="color: white;">About</a>
                 </li>
                   <li class="nav-item">
-                  <a class="nav-link" href="#" style="color: white;">Portfolio</a>
+                  <a class="nav-link" href="#tools-section" style="color: white;">Portfolio</a>
                 </li>
                   <li class="nav-item">
-                  <a class="nav-link" href="#" style="color: white;">Contact</a>
+                  <a class="nav-link" href="#contact-section" style="color: white;">Contact</a>
                 </li>
               </ul>
             </div>
       </div>
     </nav>
-</div>
+
+<section class="container" id="home-section">
+
+
 
     <div class="container">
         <div class="row">
@@ -64,7 +63,7 @@
 </section>
 <br>
 <br>
-<section class="container">
+<section class="container" id="about-section">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
@@ -110,7 +109,7 @@
 </section>
 <br>
 <br>
-<section class="container">
+<section class="container" id="tools-section">
     <div class="container">
         <h1 class="text-center">Tool and skills</h1>
         <br>
@@ -169,7 +168,7 @@
 </section>
 <br>
 <br>
-<section class="container">
+<section class="container" id="contact-section">
     <div class="container">
         {% if msg_sent == True: %}
         <h1 class="text-center"> Message Sent! Thank You!</h1>
