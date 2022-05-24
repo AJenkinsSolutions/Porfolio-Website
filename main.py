@@ -15,7 +15,7 @@ print('PATH', os.getenv('PATH'))
 
 class ContactForm(FlaskForm):
     name = StringField(label='Name', validators=[DataRequired()])
-    email = StringField(label='Email', validators=[DataRequired()])
+    email = StringField(label='Email', validators=[DataRequired(), Email()])
     phone = IntegerField(label='Phone', validators=[DataRequired()])
     message = TextAreaField(label='Message', validators=[DataRequired()])
 
