@@ -171,7 +171,11 @@
 <br>
 <section class="container">
     <div class="container">
+        {% if msg_sent == True: %}
+        <h1 class="text-center"> Message Sent! Thank You!</h1>
+        {% else %}
         <h1 class="text-center"> Get In Touch </h1>
+        {% endif %}
         <br>
         <div class="row">
             <div class="col-lg-6">
