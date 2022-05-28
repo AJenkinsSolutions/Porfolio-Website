@@ -14,6 +14,7 @@ my_email = os.getenv('MY_EMAIL')
 email_password = os.getenv('EMAIL_PASSWORD')
 target_email = os.getenv('TARGET_EMAIL')
 
+
 #   Test Enviroment variables
 # print('PATH', os.getenv('PATH'))
 
@@ -25,6 +26,7 @@ class ContactForm(FlaskForm):
     message = TextAreaField(label='Message', validators=[DataRequired(), Length(max=120)])
 
     submit = SubmitField(label='submit')
+
 
 def send_email(name, email, phone, message):
     email_message = f"Subject:Portfolio Message ALERT!!\n\nName: {name}\nEmail: {email}\nPhone: {phone}\nMessage:{message}"
@@ -40,6 +42,7 @@ def send_email(name, email, phone, message):
             # format for email
             msg=email_message)
 
+
 @app.route("/", methods=['GET', 'POST'])
 def home():
     contact_form = ContactForm()
@@ -49,7 +52,7 @@ def home():
         phone = contact_form.phone.data
         message = contact_form.message.data
         send_email(name, email, phone, message)
-        return render_template('index.html', form=contact_form, msg_sent=True )
+        return render_template('index.html', form=contact_form, msg_sent=True)
     else:
         return render_template("index.html", form=contact_form, msg_sent=False)
 
